@@ -14,8 +14,8 @@ Next, make the binary executable, and move it into your PATH, so that you can us
 #### Mac OS
 
 ```
-chmod +x ~/Downloads/file_uesio-macos-amd64-v0-2-0
-sudo mv ~/Downloads/file_uesio-macos-amd64-v0-2-0 /usr/local/bin/uesio
+chmod +x ~/Downloads/file_uesio-macos-amd64
+sudo mv ~/Downloads/file_uesio-macos-amd64 /usr/local/bin/uesio
 ```
 
 (and make sure /usr/local/bin is in your PATH)
@@ -43,7 +43,7 @@ Available Commands:
   retrieve    uesio retrieve
   sethost     uesio sethost
   site        All site related commands
-  siteadmin   uesio siteadmin
+  siteadmin   Set the name of the context site
   status      uesio status
   upsert      uesio upsert
   work        uesio work
