@@ -12,16 +12,12 @@ This is a specific LLM created by Anthropic, an AI safety and research company. 
 
 ## How to
 
-### 1. Install the Claude Bundle
-
-### 2. Set up Claude in a [View](views)
-
-### 1. Install the Claude Bundle
+### 1. Install the AI Kit
 
 -   Once you have created an app and a [Workspace](workspaces) select the ‘Installed Bundles’ tile on the left and then select the ‘BROWSE BUNDLE STORE’ button.
--   Look for the Claude Integration Bundle and install it.
+-   Look for the AI Kit Bundle and install it.
 
-### 2. Set up Claude in a [View](views)
+### 2. Set up AI Kit in a [View](views)
 
 -   Next click on the [Views](views) tile and create a view
 -   Select the [Wires](wires) panel and create a new view-only wire and name it inputs.
