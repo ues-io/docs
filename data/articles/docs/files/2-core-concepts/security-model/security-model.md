@@ -4,7 +4,7 @@ At ues.io we employ a layered approach to security. This ensures that multiple, 
 
 NOTE: For ues.io cloud customers, all of these layers are applicable to their implementation. For ues.io on-premise customers, only the container and application layers are relevant.
 
-![Metadata types](./security_diagram.png "Defense in Depth.")
+![Metadata types](./defense_in_depth.png "Defense in Depth.")
 
 ## Network Security Layer
 
