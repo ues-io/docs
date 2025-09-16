@@ -3,7 +3,7 @@ named: {}
 views:
   uesio/docs.home: true
   uesio/docs.topbar: true
-collections:
+collections: {}
 routes:
   uesio/docs.article: true
   uesio/docs.home: true
