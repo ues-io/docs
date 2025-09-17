@@ -32,17 +32,17 @@ From the start, the web was created with [declarative](declarative-app-developme
 
 Although this transition had many benefits, it also made developing web applications much more difficult and complicated. To build and operate a traditional web application today requires a deep understanding of a wide range of backend and frontend tools and frameworks. Each time a developer goes to build a web app, they must answer a lot of questions:
 
--   Should I render server-side or client-side?
--   Which bundler should I use?
--   Which component lifecycle framework should I pick?
--   Should I build my own components with the framework, or use someone else's library?
--   Do I need a styling library?
--   How should I store state?
--   What persistence layer? Do I need database indexes?
--   Do I need tests? What kind? How many? What testing frameworks and libraries should I use?
--   How do I compile my app? Do I need containers?
--   How do I run the app? Where? What cloud?
--   How do I scale, monitor, and manage the deployed app?
+- Should I render server-side or client-side?
+- Which bundler should I use?
+- Which component lifecycle framework should I pick?
+- Should I build my own components with the framework, or use someone else's library?
+- Do I need a styling library?
+- How should I store state?
+- What persistence layer? Do I need database indexes?
+- Do I need tests? What kind? How many? What testing frameworks and libraries should I use?
+- How do I compile my app? Do I need containers?
+- How do I run the app? Where? What cloud?
+- How do I scale, monitor, and manage the deployed app?
 
 There are so many difficult and important decisions to make when developing web applications, and these examples only scratch the surface.
 

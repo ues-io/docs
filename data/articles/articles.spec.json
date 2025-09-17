@@ -1,22 +1,22 @@
 {
-	"jobtype": "IMPORT",
-	"collection": "uesio/cms.article",
-	"filetype": "CSV",
-	"mappings": {
-		"uesio/cms.name": {
-			"columnname": "name"
-		},
-		"uesio/cms.slug": {
-			"columnname": "slug"
-		},
-		"uesio/cms.description": {
-			"columnname": "description"
-		},
-		"uesio/cms.author": {
-			"columnname": "author"
-		},
-		"uesio/cms.published": {
-			"columnname": "published"
-		}
-	}
+  "jobtype": "IMPORT",
+  "collection": "uesio/cms.article",
+  "filetype": "CSV",
+  "mappings": {
+    "uesio/cms.name": {
+      "columnname": "name"
+    },
+    "uesio/cms.slug": {
+      "columnname": "slug"
+    },
+    "uesio/cms.description": {
+      "columnname": "description"
+    },
+    "uesio/cms.author": {
+      "columnname": "author"
+    },
+    "uesio/cms.published": {
+      "columnname": "published"
+    }
+  }
 }

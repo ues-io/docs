@@ -19,7 +19,7 @@ cd docs
 npm run init
 ```
 
--   Select "uesio/docs" as the app.
+- Select "uesio/docs" as the app.
 
 ## Development
 

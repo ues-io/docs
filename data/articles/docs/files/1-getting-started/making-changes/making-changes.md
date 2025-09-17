@@ -16,15 +16,15 @@ Now that you've got a workspace, it's time to add some metadata to your app!
 
 There are several high-level [metadata types](home) you can add in ues.io, which we'll just briefly summarize here:
 
--   **Data Structure and Content**:
-    -   [Collections](collections): Basically, these are declarative database tables / spreadsheets. Used for structured data storage
-    -   [Files](files): Static, unstructured content. Usually images, but could be textual content as well.
--   **User Interface**:
-    -   [Views](views): An assembly of [components](components) and [wires](wires) that comprise an interactive user interface (often called called "pages" in other tools). Views can contain other Views, and can be accessed via Routes.
-    -   [Routes](routes): The URL paths that you can use to access a View. Can contain path/query-string parameters which are sent to Views.
--   **Security & Access**:
-    -   [Permission Sets](profiles-and-permission-sets): A logical grouping of access control settings, such as the ability for a user to create and edit a collection, go to a route, or view a file.
-    -   [Profiles](profiles-and-permission-sets): A set of permission sets. Users can be assigned only one profile.
+- **Data Structure and Content**:
+  - [Collections](collections): Basically, these are declarative database tables / spreadsheets. Used for structured data storage
+  - [Files](files): Static, unstructured content. Usually images, but could be textual content as well.
+- **User Interface**:
+  - [Views](views): An assembly of [components](components) and [wires](wires) that comprise an interactive user interface (often called called "pages" in other tools). Views can contain other Views, and can be accessed via Routes.
+  - [Routes](routes): The URL paths that you can use to access a View. Can contain path/query-string parameters which are sent to Views.
+- **Security & Access**:
+  - [Permission Sets](profiles-and-permission-sets): A logical grouping of access control settings, such as the ability for a user to create and edit a collection, go to a route, or view a file.
+  - [Profiles](profiles-and-permission-sets): A set of permission sets. Users can be assigned only one profile.
 
 There's lots more, but for now, we'll just stick to these.
 
@@ -71,8 +71,8 @@ Although we can (and often will) build Views from scratch, a fast way to get sta
 
 For Views, two super-common patterns for which ues.io provides built-in generators are:
 
--   **List view**: for interacting with a list of records in a collection
--   **Detail view**: for viewing/editing a single collection record
+- **List view**: for interacting with a list of records in a collection
+- **Detail view**: for viewing/editing a single collection record
 
 Let's use "Generate List View".
 
@@ -118,10 +118,10 @@ With that, we've got ourselves a working app!
 
 Let's take a quick moment to consider everything we did _not_ have to do:
 
--   Write a backend API for creating, updating, and deleting data
--   Setup and configure a frontend component framework
--   Find, assemble, and/or write any UI component code
--   Write code to connect our components to our backend APIs
+- Write a backend API for creating, updating, and deleting data
+- Setup and configure a frontend component framework
+- Find, assemble, and/or write any UI component code
+- Write code to connect our components to our backend APIs
 
 That's just scratching the surface. There's _so_ much more wheel that ues.io is saving us from having to reinvent, and we've barely scratched the surface of what it can do.
 

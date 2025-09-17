@@ -1,4 +1,4 @@
 {
-	"jobtype": "UPLOADFILES",
-	"collection": "uesio/cms.author"
+  "jobtype": "UPLOADFILES",
+  "collection": "uesio/cms.author"
 }

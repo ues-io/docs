@@ -2,99 +2,99 @@ This example uses the Swiss Commercial Registry (Zefix) API as an example to con
 
 **NOTE:** You will need to request access to <zefix@bj.admin.ch> acquire your username and password with a reason for your request.
 
--   Create a workspace called dev
+- Create a workspace called dev
 
 ## Create a Load Bot
 
--   Go to the Bots tile and create a new integration load bot named company (you can leave it as default) dialect TypeScript.
+- Go to the Bots tile and create a new integration load bot named company (you can leave it as default) dialect TypeScript.
 
--   Add the following TypeScript code to the body.
-    **NOTE:** This is particular to Zefix that requires a username and password for authentication. You can adjust the authentication method accordingly for your use case.
+- Add the following TypeScript code to the body.
+  **NOTE:** This is particular to Zefix that requires a username and password for authentication. You can adjust the authentication method accordingly for your use case.
 
 ```typescript
 import { LoadBotApi } from "@uesio/bots"
 
 type ZefixRequest = {
-	name: string
+  name: string
 }
 // These are the available fields from the full response body
 type ZefixCompany = {
-	name: string
-	chid: string
-	canton: string
-	legalSeat: string
-	status: string
-	purpose: string
-	capitalNominal: string
-	cantonalExcerptWeb: string
-	uid: string
+  name: string
+  chid: string
+  canton: string
+  legalSeat: string
+  status: string
+  purpose: string
+  capitalNominal: string
+  cantonalExcerptWeb: string
+  uid: string
 }
 
 type ZefixResponse = ZefixCompany[]
 
 export default function company(bot: LoadBotApi) {
-	const { conditions } = bot.loadRequest
-	const baseUrl = bot.getIntegration().getBaseURL()
+  const { conditions } = bot.loadRequest
+  const baseUrl = bot.getIntegration().getBaseURL()
 
-	// If no conditions were provided, return no records.
-	if (!conditions || conditions.length === 0) {
-		return
-	}
+  // If no conditions were provided, return no records.
+  if (!conditions || conditions.length === 0) {
+    return
+  }
 
-	let searchCondition = ""
-	let idCondition = ""
+  let searchCondition = ""
+  let idCondition = ""
 
-	// Figure out which type of condition was sent in.
-	conditions.forEach((condition) => {
-		if (condition.type === "SEARCH") {
-			searchCondition = condition.value as string
-		} else if (condition.field === "uesio/core.id") {
-			idCondition = condition.value as string
-		}
-	})
+  // Figure out which type of condition was sent in.
+  conditions.forEach((condition) => {
+    if (condition.type === "SEARCH") {
+      searchCondition = condition.value as string
+    } else if (condition.field === "uesio/core.id") {
+      idCondition = condition.value as string
+    }
+  })
 
-	let url = ""
-	let method = ""
-	let body = undefined
+  let url = ""
+  let method = ""
+  let body = undefined
 
-	if (searchCondition) {
-		// If we were sent a search condition, use the search API
-		url = `${baseUrl}/api/v1/company/search`
-		method = "POST"
-		body = {
-			name: searchCondition,
-		}
-	} else if (idCondition) {
-		// If we were sent an id condition use the chid API
-		url = `${baseUrl}/api/v1/company/chid/${idCondition}`
-		method = "GET"
-	} else {
-		return
-	}
+  if (searchCondition) {
+    // If we were sent a search condition, use the search API
+    url = `${baseUrl}/api/v1/company/search`
+    method = "POST"
+    body = {
+      name: searchCondition,
+    }
+  } else if (idCondition) {
+    // If we were sent an id condition use the chid API
+    url = `${baseUrl}/api/v1/company/chid/${idCondition}`
+    method = "GET"
+  } else {
+    return
+  }
 
-	const response = bot.http.request<ZefixRequest, ZefixResponse>({
-		headers: {
-			"Content-Type": "application/json",
-		},
-		method,
-		url,
-		body,
-	})
+  const response = bot.http.request<ZefixRequest, ZefixResponse>({
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method,
+    url,
+    body,
+  })
 
-	// Here we match the retrieved data records to the collection data
-	response.body.forEach((record) => {
-		bot.addRecord({
-			["name"]: record.name,
-			["canton"]: record.canton,
-			["legalseat"]: record.legalSeat,
-			["status"]: record.status,
-			["purpose"]: record.purpose,
-			["capitalnominal"]: record.capitalNominal,
-			["cantonalexcerptweb"]: record.cantonalExcerptWeb,
-			["uid"]: record.uid,
-			["uesio/core.id"]: record.chid,
-		})
-	})
+  // Here we match the retrieved data records to the collection data
+  response.body.forEach((record) => {
+    bot.addRecord({
+      ["name"]: record.name,
+      ["canton"]: record.canton,
+      ["legalseat"]: record.legalSeat,
+      ["status"]: record.status,
+      ["purpose"]: record.purpose,
+      ["capitalnominal"]: record.capitalNominal,
+      ["cantonalexcerptweb"]: record.cantonalExcerptWeb,
+      ["uid"]: record.uid,
+      ["uesio/core.id"]: record.chid,
+    })
+  })
 }
 ```
 
@@ -106,16 +106,16 @@ Select the Integration Types tile and create a new integration type called zefix
 
 Select the Collections tile and create a new collection called company then change the data source type to external and set the integration to zefix.
 
--   Then add the following new fields all with the type = text:
-    -   canton
-    -   cantonalexcerptweb
-    -   capitalnominal
-    -   legalseat
-    -   name
-    -   purpose, Type= Long Text
-    -   status
-    -   uid
--   Go to the Installed Bundles tile and select the Browse Bundle Store button and Install AppKit.
+- Then add the following new fields all with the type = text:
+  - canton
+  - cantonalexcerptweb
+  - capitalnominal
+  - legalseat
+  - name
+  - purpose, Type= Long Text
+  - status
+  - uid
+- Go to the Installed Bundles tile and select the Browse Bundle Store button and Install AppKit.
 
 ## Generate Appkit Starter
 

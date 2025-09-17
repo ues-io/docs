@@ -10,10 +10,10 @@ Each user (or organization) can create or own one or more apps. Apps are referre
 
 At this point, you've already interacted with 4 different apps owned by the uesio organization:
 
--   `uesio/web` (ues.io's main web site)
--   `uesio/docs` (where you are right now)
--   `uesio/studio` (the app for building apps, which you are logged in to right now)
--   `uesio/io` (a pre-installed collection of components used by most apps)
+- `uesio/web` (ues.io's main web site)
+- `uesio/docs` (where you are right now)
+- `uesio/studio` (the app for building apps, which you are logged in to right now)
+- `uesio/io` (a pre-installed collection of components used by most apps)
 
 ## Create an App
 

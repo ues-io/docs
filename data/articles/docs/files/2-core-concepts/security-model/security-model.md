@@ -40,13 +40,13 @@ While the other security layers are common in many applications, the Application
 
 9. **User Authentication** \- Incoming traffic is matched to a site using the domain or subdomain provided in the request url. Once the site is determined, users can authenticate using one of the following authentication mechanisms.
 
-    a. **Username/Password** \- Only salted password hashes (created with bcrypt) are stored. Users must provide a valid email address for this authentication method in order to facilitate password resets.
+   a. **Username/Password** \- Only salted password hashes (created with bcrypt) are stored. Users must provide a valid email address for this authentication method in order to facilitate password resets.
 
-    b. **External Identity Providers** \- Currently only Google Authentication is supported, but other providers can be added on request.
+   b. **External Identity Providers** \- Currently only Google Authentication is supported, but other providers can be added on request.
 
-    c. **SAML 2.0** \- Tested on services like Auth0 and Amazon Federated Identity.
+   c. **SAML 2.0** \- Tested on services like Auth0 and Amazon Federated Identity.
 
-    Once the user is authenticated, they are given a cryptographically secure, random session id that is stored in a secure (https-only) cookie.
+   Once the user is authenticated, they are given a cryptographically secure, random session id that is stored in a secure (https-only) cookie.
 
 10. **Secrets & Config Values** \- Every application needs multiple environments to facilitate use cases like development, testing and production. Secrets and Config Values allow for securely storing api keys, secrets and configuration specific to each environment.
 
@@ -98,21 +98,21 @@ Compliance with regulatory requirements and industry standards is a critical com
 
 1. **GDPR** \- As a platform handling personal data of users, potentially including those in the European Union, ues.io complies with GDPR, a comprehensive data protection regulation enforced since May 2018\. Key GDPR compliance measures include:
 
-    a. **Data Minimization and Purpose Limitation** \- We collect and process only the personal data necessary for specific, lawful purposes (e.g., user account management, transaction processing). Data usage is clearly communicated in our privacy policy.
+   a. **Data Minimization and Purpose Limitation** \- We collect and process only the personal data necessary for specific, lawful purposes (e.g., user account management, transaction processing). Data usage is clearly communicated in our privacy policy.
 
-    b. **User Rights** \- Users can exercise GDPR rights, including access, rectification, erasure (right to be forgotten), and data portability. Automated workflows and secure APIs enable users to submit requests, which are processed promptly.
+   b. **User Rights** \- Users can exercise GDPR rights, including access, rectification, erasure (right to be forgotten), and data portability. Automated workflows and secure APIs enable users to submit requests, which are processed promptly.
 
-    c. **Data Protection by Design and Default** \- Our ECS-based architecture incorporates encryption (e.g., TLS 1.3 for data in transit, AES-256 for data at rest via AWS KMS), pseudonymization where applicable, and strict access controls to safeguard personal data.
+   c. **Data Protection by Design and Default** \- Our ECS-based architecture incorporates encryption (e.g., TLS 1.3 for data in transit, AES-256 for data at rest via AWS KMS), pseudonymization where applicable, and strict access controls to safeguard personal data.
 
-    d. **Data Breach Notification** \- In the event of a data breach, we have procedures to notify affected users and relevant authorities (e.g., EU Data Protection Authorities) within 72 hours, as required by GDPR Article 33\. These are supported by AWS Security Hub and CloudWatch for rapid detection.
+   d. **Data Breach Notification** \- In the event of a data breach, we have procedures to notify affected users and relevant authorities (e.g., EU Data Protection Authorities) within 72 hours, as required by GDPR Article 33\. These are supported by AWS Security Hub and CloudWatch for rapid detection.
 
 2. **OWASP** \- The Open Web Application Security Project provides a globally recognized framework for securing web applications. ues.io aligns with OWASP guidelines to mitigate common vulnerabilities and enhance application security.
 
-    a. **OWASP Top 10 Mitigation** \- Our development and security teams prioritize protections against the OWASP Top 10 vulnerabilities, including injection attacks (e.g., SQL injection), broken authentication, and cross-site scripting (XSS). For example, we implement input validation, parameterized queries, and output encoding in all ECS-hosted application code.
+   a. **OWASP Top 10 Mitigation** \- Our development and security teams prioritize protections against the OWASP Top 10 vulnerabilities, including injection attacks (e.g., SQL injection), broken authentication, and cross-site scripting (XSS). For example, we implement input validation, parameterized queries, and output encoding in all ECS-hosted application code.
 
-    b. **Secure Development Lifecycle** \- OWASP’s Software Assurance Maturity Model (SAMM) informs our secure coding practices. We employ sophisticated static analysis tools such as type checkers, compilers, and linters in our continuous integration process.
+   b. **Secure Development Lifecycle** \- OWASP’s Software Assurance Maturity Model (SAMM) informs our secure coding practices. We employ sophisticated static analysis tools such as type checkers, compilers, and linters in our continuous integration process.
 
-    c. **API Security** \- Public-facing APIs follow OWASP API Security Top 10 guidelines, incorporating session-based authentication and protection against excessive data exposure.
+   c. **API Security** \- Public-facing APIs follow OWASP API Security Top 10 guidelines, incorporating session-based authentication and protection against excessive data exposure.
 
 ## Dependency Management
 

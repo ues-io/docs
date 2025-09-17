@@ -7,13 +7,13 @@ Once a user has signed up with ues.io that person gets to keep their username fo
 
 ## 1. Create a Team
 
--   Select your app from the Apps menu and you will then navigate to the main page of your app where you can select the ‘Teams’ breadcrumb.
--   Select the ‘NEW TEAM’ button and give your team a name. I called mine ‘my_helpers’.
+- Select your app from the Apps menu and you will then navigate to the main page of your app where you can select the ‘Teams’ breadcrumb.
+- Select the ‘NEW TEAM’ button and give your team a name. I called mine ‘my_helpers’.
 
 ![Workspace Admin](./image1.png "Workspace Admin")
 
 ## 2. Add a Team Member
 
--   Select the ‘ADD MEMBER’ button and type in the search bar for the person you are looking for and add them.
+- Select the ‘ADD MEMBER’ button and type in the search bar for the person you are looking for and add them.
 
 ![Workspace Admin](./image2.png "Workspace Admin")
