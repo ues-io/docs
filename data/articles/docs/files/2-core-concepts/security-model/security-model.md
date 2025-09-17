@@ -130,8 +130,6 @@ Unit, integration, and end-to-end testing ensure against security regressions. T
 
 ## Maintenance and Updates
 
-All ues.io source code is open source and released under the permissive MIT License. It is maintained by ues.io developers, but contributions from the broader ues.io community are accepted. To view the source code and developer documentation, visit [https://github.com/ues-io/uesio](https://github.com/ues-io/uesio).
-
 In the event of a critical security issue, a security patch can be deployed to production within minutes of completion, manual and automated testing and approval. On-premise subscribers will be notified of patches and can update their instances on their own schedule.
 
 ## Incident Response Plan
