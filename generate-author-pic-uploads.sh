@@ -18,7 +18,7 @@ printf "uesio/core.recordid,uesio/core.fieldid,uesio/core.path$crnl" >> $csvPath
 #
 # However, Markdown filese can be buried either within a folder,
 # or they can be nested within their category directory.
-for file in $(find "$targetDir/files" -type f -maxdepth 3)
+for file in $(find "$targetDir/files" -maxdepth 3 -type f)
 do
     relative_path=${file#"$targetDir/files/"}
     basefile=$(basename -- "$file")
