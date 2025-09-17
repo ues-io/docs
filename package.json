@@ -9,8 +9,7 @@
 		"lint-fix": "prettier -w . && eslint --fix .",
 		"push": "uesio workspace deploy && ./seed.sh",
 		"push-content": "./seed.sh",
-    "pull": "uesio workspace retrieve",
-    "publish": "uesio bundle create"
+    "pull": "uesio workspace retrieve"
   },
   "devDependencies": {
     "@eslint/json": "^0.13.2",
