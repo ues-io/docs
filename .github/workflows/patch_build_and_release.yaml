@@ -28,7 +28,7 @@ jobs:
         shell: bash
         run: |
           # Symlink the Uesio CLI for subsequent use
-          wget -q ttps://github.com/ues-io/uesio-releases/releases/latest/download/uesio-linux
+          wget -q https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-linux
           chmod +x uesio-linux
           sudo ln -s $PWD/uesio-linux /usr/local/bin/uesio
       - name: Lint
