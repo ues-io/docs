@@ -2,13 +2,13 @@
 
 Uesio's CLI is distributed as a platform-specific binary executable.
 
-The latest Uesio CLI release binaries, and release notes, can be found at [the uesio Github repo releases area](https://github.com/ues-io/uesio/releases).
+The latest Uesio CLI release binaries, and release notes, can be found at [the uesio Github repo releases area](https://github.com/ues-io/uesio-releases/releases).
 
 Click here to download the ues.io CLI for your operating system and architecture:
 
 - [Linux](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-linux)
-- [Mac OS (AMD)](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-macos-amd64)
-- [Mac OS (ARM)](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-macos-arm64)
+- [macOS (AMD)](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-macos-amd64)
+- [macOS (ARM)](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio-macos-arm64)
 - [Windows](https://github.com/ues-io/uesio-releases/releases/latest/download/uesio.exe)
 
 Next, make the binary executable, and move it into your PATH, so that you can use it from any directory:

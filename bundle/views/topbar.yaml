@@ -33,13 +33,13 @@ definition:
                     text: Community
                     signals:
                       - signal: route/REDIRECT
-                        path: https://github.com/ues-io/uesio/discussions
+                        path: https://community.$Site{domain}/
                 - uesio/io.button:
                     uesio.variant: uesio/sitekit.secondary_dark
                     text: Blog
                     signals:
                       - signal: route/REDIRECT
-                        path: "https://$Site{domain}/blog"
+                        path: "https://$Site{domain}/news"
           - uesio/io.group:
               components:
                 - uesio/io.button:
@@ -60,13 +60,13 @@ definition:
                     text: Community
                     signals:
                       - signal: route/REDIRECT
-                        path: https://github.com/ues-io/uesio/discussions
+                        path: https://community.$Site{domain}/
                 - uesio/io.button:
                     uesio.variant: uesio/sitekit.secondary_dark
                     text: Blog
                     signals:
                       - signal: route/REDIRECT
-                        path: "https://$Site{domain}/blog"
+                        path: "https://$Site{domain}/news"
                 - uesio/io.button:
                     uesio.variant: uesio/sitekit.primary_dark
                     text: Login
